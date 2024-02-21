@@ -21,19 +21,19 @@ namespace Godly.UnitySavingSystem
         void OnEnable()
         {
             saveDirectory = Directory.CreateDirectory(Application.persistentDataPath + "/saves");
-			//Go through all Files in the Directory
+	    //Go through all Files in the Directory
             foreach (FileInfo info in saveDirectory.GetFiles())
             {
-				//Check whether they're dat Files
+		//Check whether they're dat Files
                 if (info.Name.EndsWith(".dat"))
                 {
-					//Parse them if they are.
+		    //Parse them if they are.
                     SaveGameProfile sgp = SaveGameProfile.FromFile(info.Name);
                     profiles.Add(sgp);
                 }
             }
-			/*
-			You can enable this in case you do not have a way to create a Profile yet, see @SaveSelectionDropDown
+            /*
+	   You can uncomment this in case you do not have a way to create a Profile yet, see @SaveSelectionDropDown
 			 
             if (profiles.Count == 0)
             {
@@ -47,15 +47,14 @@ namespace Godly.UnitySavingSystem
 
         public void SaveProfile()
         {
-			// Uncomment this if you want ALL profiles to be saved with this method!
+	    // Uncomment this if you want ALL profiles to be saved with this method!
             //this.profiles.ForEach(sg => sg.SaveToFile());
             this.activeProfile.SaveToFile();
         }
 
-		/*
-		
-		This is one of the functions used in the Example, not necessary to run the whole system, can also be changed etc.
-		*/
+	/*
+	This is one of the functions used in the Example, not necessary to run the whole system, can also be changed etc.
+	*/
         public void CreateSaveGameProfile(TMPro.TMP_InputField field)
         {
             SaveGameProfile sgp = new SaveGameProfile(field.text);
