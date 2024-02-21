@@ -1,7 +1,7 @@
 
 # Unity Save Data Serialization 
 
-A small compact ByteFormatter-based Save & Load System for Game Profiles
+A compact ByteFormatter-based Save & Load System for Game Profiles that I created for Small & Portfolio Games
 
 ## Features
 
