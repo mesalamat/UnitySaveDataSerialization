@@ -21,7 +21,7 @@ namespace Godly.UnitySavingSystem.Serializables
             this.name = name;
             this.createdTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
             toSerialize = new ArrayList();
-			//All outside values of type T you want to save need to be registered here or somewhere during Runtime. Re-registering upon parsing is not necessary.
+	    //All non-internal(this class) values of type T you want to save need to be registered here or somewhere during Runtime. Re-registering upon parsing is not necessary.
             RegisterSerializable(new CollectibleSerializable(Collectible.CollectibleType.COIN, 0));
         }
 
