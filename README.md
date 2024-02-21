@@ -8,6 +8,7 @@ A compact ByteFormatter-based Save & Load System for Game Profiles that I create
 - Compact & Slim
 - Expandable: Allows for Custom Serialization Integration(Classes etc.)
 - Multiple Profile Support
+- Async Profile Saving with Task States(Can be used for displaying a "Saving" Icon ingame e.g.)
 
 
 ## Usage
@@ -19,4 +20,4 @@ The Repo contains integrated usage Examples!
 
 
 ## Known Issues
-- Doesn't have backwards compatibility -> If you add more Serializables etc. it will no longer load the Save Data properly.
+Doesn't have backwards compatibility -> If you add more Serializables etc. it will no longer load the Save Data properly.
