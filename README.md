@@ -19,5 +19,6 @@ To use the SaveSystem, you need a Singleton Instance/GameObject of the SavesMana
 The Repo contains integrated usage Examples!
 
 
-## Known Issues
+## Known Issues / Drawbacks
 Doesn't have backwards compatibility -> If you add more Serializables etc. it will no longer load the Save Data properly.
+Only works on Windows Platforms
